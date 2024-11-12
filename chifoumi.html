@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Chifoumi</title>
+    <link rel="stylesheet" type="text/css" href="./asset/css/chifoumi.css">
+</head>
+<body>
+    <header>
+        <h1>Chi-Fou-Mi (de pain) !</h1>
+    </header>
+    <div id="game-container">
+        <div id="choices-container">
+            <div id="user-choice">
+                <span id="choixJoueur">Choix de l'utilisateur : </span>
+                <img id="imgUserChoice" src="./asset/img/depositphotos_21321181-stock-illustration-question-mark.webp" alt="Choix de l'utilisateur">
+            </div>
+            <div id="computer-choice">
+                <span id="choixOrdinateur">Choix de l'ordinateur : </span>
+                <img id="imgComputerChoice" src="./asset/img/depositphotos_21321181-stock-illustration-question-mark.webp" alt="Choix de l'ordinateur">
+            </div>
+        </div>
+
+        <h2>Sélectionnez Pierre, Feuille ou Ciseaux</h2>
+        <div id="options">
+            <img src="./asset/img/pierre.png" alt="Pierre" onclick="play('pierre')">
+            <img src="./asset/img/papier.png" alt="Feuille" onclick="play('papier')">
+            <img src="./asset/img/ciseau.png" alt="Ciseaux" onclick="play('ciseau')">
+        </div>
+
+        <div id="scoreboard">
+            <div class="score">
+                <span>Score Joueur : </span><span id="ScoreUser ">0</span>
+            </div>
+            <div class="score">
+                <span>Score Ordinateur : </span><span id="ScoreOrdi">0</span>
+            </div>
+        </div>
+
+        <div id="message"></div>
+    </div>
+    <script src="./asset/js/script.js"></script>
+</body>
+</html>

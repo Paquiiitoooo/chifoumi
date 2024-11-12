@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+#choices-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+#user-choice, #computer-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#options img {
+    padding: 1rem;
+    width: 100px;
+    height: 100px;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#imgVersus{
+    width: 150px;
+    height: auto;
+}
+
+#options img:hover {
+    transform: scale(1.1);
+}
+
+#imgUserChoice{
+	width: 50px;
+	height: auto;
+    margin: 1rem;
+}
+
+#imgComputerChoice{
+	width: 50px;
+	height: auto;
+    margin: 1rem;
+}
+
+#message {
+    font-size: 20px;
+    margin-top: 20px;
+}
