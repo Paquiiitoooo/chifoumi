@@ -14,17 +14,22 @@ function play(userChoice) {
     document.getElementById("choixOrdinateur").textContent = `Choix de l'ordinateur: ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}`;
 
     let message = '';
+    let messageColor = ''; // Variable pour stocker la couleur du message
+
     if (userChoice === computerChoice) {
         message = "Égalité !";
+        messageColor = "black"; // Noir pour égalité
     } else if (
         (userChoice === 'pierre' && computerChoice === 'ciseau') ||
         (userChoice === 'papier' && computerChoice === 'pierre') ||
         (userChoice === 'ciseau' && computerChoice === 'papier')
     ) {
         message = "Tu as gagné !";
+        messageColor = "green"; // Vert pour victoire
         scoreUser += 1;
     } else {
         message = "Tu as perdu !";
+        messageColor = "red"; // Rouge pour défaite
         scoreOrdi += 1;
     }
 
@@ -32,8 +37,10 @@ function play(userChoice) {
     document.getElementById("scoreUser").textContent = `${scoreUser}`;
     document.getElementById("scoreOrdi").textContent = `${scoreOrdi}`;
     
-    // Affichage du message de résultat
-    document.getElementById("message").textContent = message;
+    // Affichage du message de résultat avec la couleur appropriée
+    const messageElement = document.getElementById("message");
+    messageElement.textContent = message;
+    messageElement.style.color = messageColor; // Applique la couleur
 
     // Vérification si un joueur a gagné
     if (scoreUser === 3) {
