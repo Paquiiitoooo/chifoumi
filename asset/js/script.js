@@ -28,10 +28,40 @@ function play(userChoice) {
         scoreOrdi += 1;
     }
 
-    // Affichage du message de résultat
-    document.getElementById("message").textContent = message;
-
     // Mise à jour des scores
     document.getElementById("scoreUser").textContent = `${scoreUser}`;
     document.getElementById("scoreOrdi").textContent = `${scoreOrdi}`;
+    
+    // Affichage du message de résultat
+    document.getElementById("message").textContent = message;
+
+    // Vérification si un joueur a gagné
+    if (scoreUser === 3) {
+        alert("Félicitations, tu as gagné !");
+        resetGame();  // Réinitialise le jeu après une victoire
+    } else if (scoreOrdi === 3) {
+        alert("Dommage, l'ordinateur a gagné !");
+        resetGame();  // Réinitialise le jeu après une défaite
+    }
+}
+
+// Fonction pour réinitialiser les scores et recommencer la partie
+function resetGame() {
+    scoreUser = 0;
+    scoreOrdi = 0;
+
+    // Réinitialiser l'affichage des scores
+    document.getElementById("scoreUser").textContent = `${scoreUser}`;
+    document.getElementById("scoreOrdi").textContent = `${scoreOrdi}`;
+
+    // Réinitialiser les images des choix
+    document.getElementById("imgUserChoice").src = "./asset/img/depositphotos_21321181-stock-illustration-question-mark.webp";
+    document.getElementById("imgComputerChoice").src = "./asset/img/depositphotos_21321181-stock-illustration-question-mark.webp";
+
+    // Réinitialiser les textes des choix
+    document.getElementById("choixJoueur").textContent = "Choix de l'utilisateur : ";
+    document.getElementById("choixOrdinateur").textContent = "Choix de l'ordinateur : ";
+
+    // Effacer le message
+    document.getElementById("message").textContent = "";
 }
