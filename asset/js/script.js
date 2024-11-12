@@ -1,3 +1,7 @@
+// Initialisation des scores
+let scoreUser  = 0;
+let scoreOrdi = 0;
+
 function play(userChoice) {
     const choices = ['pierre', 'papier', 'ciseau'];
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
@@ -27,14 +31,31 @@ function play(userChoice) {
         (userChoice === 'ciseau' && computerChoice === 'papier')
     ) {
         message = "Tu as gagné!";
-        scoreUser  += 1;
+        scoreUser  += 1; // Incrémenter le score de l'utilisateur
     } else {
         message = "Tu as perdu!";
-        scoreOrdi += 1;
+        scoreOrdi += 1; // Incrémenter le score de l'ordinateur
     }
 
     // Mettre à jour les scores
-    document.getElementById("ScoreUser ").textContent = scoreUser ;
+    document.getElementById("ScoreUser").textContent = scoreUser;
     document.getElementById("ScoreOrdi").textContent = scoreOrdi;
     document.getElementById("message").textContent = message;
+}
+
+function restart() {
+    // Réinitialiser les scores
+    scoreUser  = 0;
+    scoreOrdi = 0;
+
+    // Mettre à jour l'affichage des scores
+    document.getElementById("ScoreUser").textContent = scoreUser;
+    document.getElementById("ScoreOrdi").textContent = scoreOrdi;
+
+    // Réinitialiser les choix affichés
+    document.getElementById("choixJoueur").textContent = "Choix de l'utilisateur : ";
+    document.getElementById("choixOrdinateur").textContent = "Choix de l'ordinateur : ";
+    document.getElementById("imgUserChoice").src = './asset/img/depositphotos_21321181-stock-illustration-question-mark.webp'; // Image par défaut
+    document.getElementById("imgComputerChoice").src = './asset/img/depositphotos_21321181-stock-illustration-question-mark.webp'; // Image par défaut
+    document.getElementById("message").textContent = ""; // Réinitialiser le message
 }

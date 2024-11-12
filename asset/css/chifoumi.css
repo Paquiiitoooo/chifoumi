@@ -11,12 +11,12 @@ body {
     background-color: whitesmoke;
 }
 
-header{
+header {
     align-items: center;
     margin: 2%;
 }
 
-#game-container{
+#game-container {
     position: relative;
     width: 90%; 
     background-color: white;
@@ -48,28 +48,54 @@ header{
     transition: transform 0.3s;
 }
 
-#imgVersus{
+#imgVersus {
     width: 150px;
     height: auto;
+}
+
+#scoreboard {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0 5%;
+}
+
+.score {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 #options img:hover {
     transform: scale(1.1);
 }
 
-#imgUserChoice{
-	width: 50px;
-	height: auto;
+#imgUserChoice {
+    width: 50px;
+    height: auto;
     margin: 1rem;
 }
 
-#imgComputerChoice{
-	width: 50px;
-	height: auto;
+#imgComputerChoice {
+    width: 50px;
+    height: auto;
     margin: 1rem;
 }
 
 #message {
     font-size: 20px;
     margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
 }
