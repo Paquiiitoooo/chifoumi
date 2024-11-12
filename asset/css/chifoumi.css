@@ -88,14 +88,16 @@ header {
 
 button {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #8b8b8b;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 40px;
+    transition: transform 0.5s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #737373;
+    transform: scale(1.1);
 }
